@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comicraft – AI Comic Story Creator Using Gemini Models</title>
+  <meta name="description" content="Comicraft turns your ideas into comic stories, characters, dialogues and scenes with Gemini AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated background blobs -->
+  <div class="bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Comi<span>craft</span></a>
+      <nav id="menu" class="menu" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#creator" class="btn btn-sm menu-cta">Create Comic</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="chip">✨ Powered by Gemini AI</span>
+          <h1>Turn Your Ideas Into Amazing Comics With AI</h1>
+          <p class="lead">Comicraft uses Gemini AI models to transform your ideas into creative comic stories, characters, dialogues, and scenes.</p>
+          <div class="btn-row">
+            <a href="#creator" class="btn">Create Your Story</a>
+            <a href="#features" class="btn btn-ghost">Explore Features</a>
+          </div>
+        </div>
+        <!-- CSS-built comic illustration -->
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-card">
+            <div class="art-panel p1"><span class="burst">POW!</span></div>
+            <div class="art-panel p2"><div class="hero-char"></div><div class="bubble">Let's write a story!</div></div>
+            <div class="art-panel p3"><div class="planet"></div><div class="bubble b-right">Gemini is thinking…</div></div>
+          </div>
+          <div class="float f1">🚀</div><div class="float f2">🦸</div><div class="float f3">💬</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT COMICRAFT ===== -->
+    <section id="about" class="section">
+      <div class="container split">
+        <div class="reveal">
+          <h2 class="title">What is Comicraft?</h2>
+          <p>Comicraft is an AI-powered comic story creation platform that uses Gemini models to help users generate unique comic stories from simple ideas.</p>
+          <p>Type a sentence, pick a genre, and get a full four-panel story you can shape into your own.</p>
+        </div>
+        <ul class="pills reveal">
+          <li>🧠 AI-powered storytelling</li><li>🎭 Character generation</li><li>🖼️ Scene creation</li>
+          <li>💬 Dialogue generation</li><li>🌟 Creative story development</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="title center reveal">Everything you need to make a comic</h2>
+        <div class="grid3">
+          <article class="card reveal"><div class="icon">📖</div><h3>AI Story Generation</h3><p>Turn one sentence into a complete story with a beginning, conflict and ending.</p></article>
+          <article class="card reveal"><div class="icon">🦸</div><h3>Character Creation</h3><p>Get heroes, sidekicks and villains with names, traits and personalities.</p></article>
+          <article class="card reveal"><div class="icon">🎬</div><h3>Comic Scene Generation</h3><p>Receive panel-by-panel scene descriptions that are ready to draw.</p></article>
+          <article class="card reveal"><div class="icon">💬</div><h3>AI Dialogue Generation</h3><p>Natural speech-bubble lines that match each character's voice.</p></article>
+          <article class="card reveal"><div class="icon">🎛️</div><h3>Story Customization</h3><p>Choose the genre and cast size, then adjust the story your way.</p></article>
+          <article class="card reveal"><div class="icon">✨</div><h3>Gemini AI Integration</h3><p>Built around Google Gemini models for fast, creative writing.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how" class="section">
+      <div class="container">
+        <h2 class="title center reveal">How it works</h2>
+        <ol class="steps">
+          <li class="card reveal"><b class="num">1</b><h3>Enter Your Idea</h3><p>Describe your story in a sentence or two.</p></li>
+          <li class="card reveal"><b class="num">2</b><h3>AI Generates the Story</h3><p>Gemini writes the plot, panels and dialogue.</p></li>
+          <li class="card reveal"><b class="num">3</b><h3>Customize Characters &amp; Scenes</h3><p>Change the genre, cast and scenes until it feels right.</p></li>
+          <li class="card reveal"><b class="num">4</b><h3>Create Your Comic</h3><p>Turn the finished script into your comic.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== AI COMIC CREATOR (DEMO) ===== -->
+    <section id="creator" class="section">
+      <div class="container">
+        <h2 class="title center reveal">Try the AI Comic Creator</h2>
+        <p class="sub center reveal">Demo mode: stories are generated in your browser. No API key needed.</p>
+        <div class="split creator">
+          <form id="genForm" class="card reveal" novalidate>
+            <label for="idea">Your story idea</label>
+            <textarea id="idea" rows="5" placeholder="Enter your comic story idea..." required></textarea>
+            <div class="row">
+              <div>
+                <label for="genre">Genre</label>
+                <select id="genre">
+                  <option>Fantasy</option><option>Adventure</option><option>Comedy</option>
+                  <option>Romance</option><option>Sci-Fi</option><option>Mystery</option>
+                </select>
+              </div>
+              <div>
+                <label for="chars">Characters</label>
+                <input id="chars" type="number" min="1" max="5" value="2">
+              </div>
+            </div>
+            <p class="error" id="formError" role="alert"></p>
+            <button type="submit" class="btn" id="genBtn">Generate Comic Story</button>
+          </form>
+          <div class="card result reveal" id="result" aria-live="polite">
+            <p class="placeholder">Your generated story will appear here. Try “a robot who wants to become a chef”.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SAMPLE COMIC ===== -->
+    <section id="sample" class="section">
+      <div class="container">
+        <h2 class="title center reveal">Sample comic preview</h2>
+        <div class="comic">
+          <figure class="panel reveal"><span class="tag">Panel 1</span><div class="scene s1">🧑‍🚀</div><div class="bubble">I'm Nova, the youngest pilot on Station Zeta!</div><figcaption>Character introduction</figcaption></figure>
+          <figure class="panel reveal"><span class="tag">Panel 2</span><div class="scene s2">⚠️</div><div class="bubble">Alarm! The star map just vanished!</div><figcaption>The problem begins</figcaption></figure>
+          <figure class="panel reveal"><span class="tag">Panel 3</span><div class="scene s3">💥</div><div class="bubble">Hold on, I'm taking the shortcut!</div><figcaption>Action and conflict</figcaption></figure>
+          <figure class="panel reveal"><span class="tag">Panel 4</span><div class="scene s4">🌌</div><div class="bubble">Map found. Home is this way!</div><figcaption>The ending</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECHNOLOGY ===== -->
+    <section id="tech" class="section">
+      <div class="container">
+        <h2 class="title center reveal">Technology used</h2>
+        <div class="badges">
+          <div class="badge reveal">🌐 HTML5</div><div class="badge reveal">🎨 CSS3</div>
+          <div class="badge reveal">⚡ JavaScript</div><div class="badge reveal">🔷 Google Gemini AI</div>
+          <div class="badge reveal">🧬 Gemini Models</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OBJECTIVE ===== -->
+    <section id="objective" class="section">
+      <div class="container">
+        <div class="card objective reveal">
+          <h2 class="title">Project objective</h2>
+          <p class="big">To make comic storytelling easier and more creative by combining generative AI with a simple user-friendly interface.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2 class="title center reveal">Contact us</h2>
+        <form id="contactForm" class="card reveal" novalidate>
+          <label for="name">Name</label><input id="name" type="text" placeholder="Your name" required>
+          <label for="email">Email</label><input id="email" type="email" placeholder="you@example.com" required>
+          <label for="msg">Message</label><textarea id="msg" rows="4" placeholder="How can we help?" required></textarea>
+          <p class="error" id="contactMsg" role="status"></p>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div>
+        <a href="#home" class="logo">Comi<span>craft</span></a>
+        <p>AI comic story creation powered by Gemini models.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a><a href="#features">Features</a><a href="#how">How It Works</a><a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.500c.5.100.700-.200.700-.500v-1.800c-2.800.6-3.400-1.200-3.400-1.200-.5-1.200-1.100-1.500-1.100-1.500-.9-.6.100-.6.100-.6 1 .1 1.500 1 1.500 1 .9 1.500 2.300 1.100 2.900.8.1-.7.400-1.100.6-1.400-2.200-.3-4.600-1.100-4.600-5 0-1.100.4-2 1-2.700-.1-.3-.4-1.300.1-2.700 0 0 .8-.3 2.700 1a9.400 9.400 0 0 1 5 0c1.900-1.300 2.700-1 2.700-1 .5 1.400.2 2.400.1 2.700.6.700 1 1.600 1 2.700 0 3.900-2.400 4.700-4.600 5 .4.300.7.900.7 1.800v2.700c0 .3.200.6.700.5A10 10 0 0 0 12 2z"/></svg></a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h5.500l4.200 5.700L17.700 3H21l-6.800 7.800L21.500 21H16l-4.500-6-5.200 6H3l7.300-8.300L3 3zm4 1.500 9.500 15h1.500L8.500 4.500H7z"/></svg></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4v11H4V9zm2-6a2.300 2.300 0 1 1 0 4.600A2.300 2.300 0 0 1 6 3zm4 6h3.800v1.600c.6-1 1.900-1.900 3.800-1.900 4 0 4.400 2.600 4.400 5.900V20h-4v-4.800c0-1.400 0-3-1.900-3s-2.100 1.400-2.100 2.900V20h-4V9z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© 2026 Comicraft. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
